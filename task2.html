@@ -13,6 +13,7 @@
         .container{
             width: 98vw;
             height: 98vh;
+            border: 1px solid green;
             margin: auto;
             display: grid;
             grid-gap: 20px;
@@ -41,6 +42,28 @@
         }
         .item-4{
             background-color: rgb(91, 112, 90);
+        }
+        @media screen and (max-width: 576px) {
+           .container{ 
+            grid-template: repeat(4,1fr) / 1fr;
+
+           }
+           .item-1{
+            grid-column: 1/-1;
+            grid-row: 1/1;
+           }
+           .item-2{
+            grid-column: auto/-1;
+            grid-row: auto/ span 1;
+           }
+           .item-3{
+            grid-column: auto/-1;
+            grid-row: auto/span 1;
+           }
+           .item-4{
+            grid-column: auto/-1;
+            grid-row: auto/span 1;
+           }
         }
 
     </style>
