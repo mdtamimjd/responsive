@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            max-width: 1440px;
+            height: 1000px;
+            border: 2px solid red;
+            display: grid;
+            margin: auto;
+            grid-template: repeat(2, 1fr) / repeat(2,1fr);
+
+        }
+        .container>div{
+            border: 1px solid rgb(131, 130, 130);
+        }
+        .items1{
+            background-image: url('./v_f.jpeg');
+            background-size: cover;
+        }
+        .items4{
+            background-image: url('./f-f.jpeg');
+            background-size: cover;
+        }
+        .items2,.items3{
+            padding: 20px;
+        }
+        @media screen and (max-width: 600px) {
+            .container{
+                grid-template: repeat(4,1fr) / repeat(1,1fr);
+            }
+            .items4{
+                grid-row: 3/4;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="items1"></div>
+        <div class="items2"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt doloribus optio perferendis eum magni nam fuga, maiores at ipsum veniam eligendi facilis distinctio iusto deserunt repellendus ut. Eligendi, voluptate provident.</p></div>
+        <div class="items3"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus et sapiente alias, reprehenderit ad quo commodi incidunt omnis exercitationem, autem ratione delectus nisi culpa itaque ut molestias, voluptate beatae repellendus?</p></div>
+        <div class="items4"></div>
+    </div>
+</body>
+</html>
