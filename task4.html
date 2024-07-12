@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task4</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .container{
+            width: 90vw;
+            height: 90vh;
+            margin: auto;
+            display: grid;
+            grid-gap: 20px;
+            grid-template: repeat(2, 1fr) / repeat(3,1fr);
+
+        }
+        .item1{
+            background-image: url('./v_f.jpeg');
+            background-size: cover;
+        }
+        .item2{
+            grid-column: auto/span 2;
+        }
+        .item3{
+            background-image: url('./f-f.jpeg');
+            background-size: cover;
+        }
+        .item4{
+            grid-column: auto/span 2;
+        }
+        .item2,.item4{
+            display: flex;
+            flex-direction: column;
+            row-gap: 40px;
+        }
+        .btn{
+            text-decoration: none;
+            padding: 13px 30px;
+            background-color: blue;
+            border: 1px solid black;
+            color: white;
+            border-radius: 5px;
+            font-family: sans-serif;
+            font-size: large;
+        }
+        @media screen and (max-width:600px) {
+            .container{
+                display: grid;
+            grid-template: repeat(4, 1fr) / repeat(1,1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+            <div class="item1"></div>
+            <div class="item2"><h2>What is Healthy food</h2><p>Healthy eating is not about strict limitations, staying unrealistically thin, or depriving yourself of the foods you love. Rather, it’s about eating well-balanced meals that leave you feeling great, having more energy, improving your health, and boosting your mood.</p><span><a class="btn" href="">Learn More</a></span></div>
+            <div class="item3"></div>
+            <div class="item4"><h2>What is jump food</h2><p>When thinking about how much junk food you eat, remember that everybody is different — if you are shorter or smaller than average, or you do less exercise than the average person, you will also need to eat less than the average person. If you are trying to lose weight, try and keep the amount of junk food you eat to a minimum</p><span><a href="" class="btn">Learn More</a></span></div>
+    </div>
+</body>
+</html>
